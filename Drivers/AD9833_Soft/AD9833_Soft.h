@@ -1,8 +1,7 @@
 #ifndef _AD9833_SOFT_H
 #define _AD9833_SOFT_H
 
-#include "main.h" 
-#include "spi.h"
+#include "main.h"
 
 #define FREQ_REG_MAX 268435456ULL  // AD9833 为28位频率寄存器, 使用ULL确保类型正确
 
