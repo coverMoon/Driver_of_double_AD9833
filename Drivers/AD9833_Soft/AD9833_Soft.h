@@ -103,7 +103,6 @@ typedef struct
 
 /**
   * @brief AD9833初始化结构体，若只需要一路输出，另一通道可全部初始化为0，也可直接默认初始化
-  *     @arg hspi: 指向SPI句柄的指针
   *     @arg status: 工作状态 (使用 workStatus 枚举)
   *     @arg AD_CS1: 通道一输出参数
   *     @arg AD_CS2: 通道二输出参数
