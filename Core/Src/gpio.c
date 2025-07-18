@@ -55,7 +55,10 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(AD9833_CS1_GPIO_Port, AD9833_CS1_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, AD9833_SCLK_Pin|AD9833_CS1_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(AD9833_MOSI_GPIO_Port, AD9833_MOSI_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(AD9833_CS2_GPIO_Port, AD9833_CS2_Pin, GPIO_PIN_SET);
@@ -69,12 +72,12 @@ void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOD, LEDR_Pin|LEDG_Pin|LEDB_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : AD9833_CS1_Pin */
-  GPIO_InitStruct.Pin = AD9833_CS1_Pin;
+  /*Configure GPIO pins : AD9833_SCLK_Pin AD9833_CS1_Pin AD9833_MOSI_Pin */
+  GPIO_InitStruct.Pin = AD9833_SCLK_Pin|AD9833_CS1_Pin|AD9833_MOSI_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(AD9833_CS1_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : AD9833_CS2_Pin */
   GPIO_InitStruct.Pin = AD9833_CS2_Pin;

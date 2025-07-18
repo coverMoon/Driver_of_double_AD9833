@@ -5,6 +5,8 @@
       <w>cmsiscore</w>
       <w>hspi</w>
       <w>lcddev</w>
+      <w>mclk</w>
+      <w>sclk</w>
       <w>setxcmd</w>
       <w>setycmd</w>
       <w>usart</w>

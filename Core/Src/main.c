@@ -24,7 +24,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "AD9833_HAL.h"
+// "AD9833_HAL.h"
+#include "AD9833_Soft.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -90,12 +91,11 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_SPI2_Init();
-  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);
   AD9833_InitTypedef AD9833;
   AD9833.AD_CS1.freq = 1000;
-  AD9833.AD_CS1.phase = 0;
+  AD9833.AD_CS1.phase = 180;
   AD9833.AD_CS1.freqReg = 0;
   AD9833.AD_CS1.phaseReg = 0;
   AD9833.AD_CS1.wave = SINE_WAVE;
@@ -106,7 +106,6 @@ int main(void)
   AD9833.AD_CS2.phaseReg = 0;
   AD9833.AD_CS2.wave = SINE_WAVE;
 
-  AD9833.hspi = &hspi1;
   AD9833.status = CS1_CS2_DOUBLE;
 
   AD9833_Cmd_Sync(&AD9833);

@@ -59,8 +59,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define AD9833_SCLK_Pin GPIO_PIN_5
+#define AD9833_SCLK_GPIO_Port GPIOA
 #define AD9833_CS1_Pin GPIO_PIN_6
 #define AD9833_CS1_GPIO_Port GPIOA
+#define AD9833_MOSI_Pin GPIO_PIN_7
+#define AD9833_MOSI_GPIO_Port GPIOA
 #define AD9833_CS2_Pin GPIO_PIN_4
 #define AD9833_CS2_GPIO_Port GPIOC
 #define LCDCS_Pin GPIO_PIN_8

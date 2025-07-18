@@ -66,10 +66,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # CMSIS/DSP/Src/WindowFunctions/WindowFunctions.c
     Drivers/System/Delay/delay.c
     Drivers/System/usart_printf/usart_printf.c
-    Drivers/LCD_3.5/Src/ili9488.c
-    Drivers/LCD_3.5/Src/font.c
-    Drivers/LCD_3.5/Src/lcd.c
-    Drivers/AD9833_HAL/AD9833_HAL.c
+#    Drivers/AD9833_HAL/AD9833_HAL.c
+    Drivers/AD9833_Soft/AD9833_Soft.c
 )
 
 # Add include paths
@@ -80,8 +78,8 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     CMSIS/DSP/PrivateInclude
     Drivers/System/Delay
     Drivers/System/usart_printf
-    Drivers/LCD_3.5/Inc
-    Drivers/AD9833_HAL
+#    Drivers/AD9833_HAL
+    Drivers/AD9833_Soft
 )
 
 # Add project symbols (macros)
